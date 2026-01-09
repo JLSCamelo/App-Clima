@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="png" href="Assets/meteorology_5903953.png">
+    <title>CLima</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="titulo">
+            <img src="Assets/clima.png" alt="clima" width="60">
+   
+            <h1>Previsão do Tempo</h1>
+        </div>
+        
+
+
+        <div class="search-box">
+            <input type="text" id="inputCidade" placeholder="Digite o nome da cidade...">
+            <button onclick="buscarClima()">Buscar</button>
+        </div>
+
+        <div id="resultado" class="hidden">
+            <div id="previsaosemana">
+                
+            </div> 
+        </div>
+
+        <div id="resultado" class="weather-card hidden">
+            <h2 id="cidadeTitulo">Cidade</h2>
+    
+            <div class="temp-container">
+                <span id="tempAtual">--</span>°C
+            </div>
+
+            <p id="descricaoClima">--</p>
+
+            <div class="details">
+                <div class="col">
+                    <p id="vento"> <img src="Assets/wind.png" id="icons" alt="icone_vento" width="20"> km/h</p>
+                    <p id="raiossol">--</p>
+                </div>
+            </div>
+        </div>
+        <template id="modelo-previsao">
+            <div class="previsão-item">
+                <span class="data-txt"></span>
+                <img class="clima-img" src="" alt="clima" width="45">
+                <span class="condicao-txt"></span>
+                
+                <div class="iconlinha">
+                    <img class="temp-icone" src="Assets/termometro.png" alt="termometro">
+                    <strong class="temp-txt"></strong> 
+                </div>
+
+                <div class="iconlinha">
+                    <img src="Assets/uv.png" alt="raiosuv">
+                    <span class="uv-txt"></span>
+                </div>
+
+                <div class="iconlinha">
+                    <img src="Assets/wind.png" alt="vento">
+                    <span class="vento-txt"></span>
+                </div>
+            </div>
+        </template>
+<div id="previsaosemana"></div>
+
+
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

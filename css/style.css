@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.titulo {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 70px;
+    display: flex;         /* Ativa o modo de linha (flex) */
+    align-items: center;    /* Alinha o texto e a imagem no centro verticalmente */
+    justify-content: center; /* Centraliza o grupo todo na tela (opcional) */
+    gap: 15px;             /* Cria um espaço entre o texto e a imagem */
+}
+
+.titulo h1 {
+    margin: 0;              /* Remove as margens padrão do h1 para não quebrar o alinhamento */
+}
+
+
+
+body{
+    background: linear-gradient(135deg, rgb(0, 140, 255) , rgb(255, 255, 255));
+    min-height: 100vh;                                   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgb(37, 37, 37);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.search-box{   
+    margin:30px 0;
+    display: flex;
+    gap: 10px;
+}
+
+input{
+    flex: 1;
+    padding: 18px;
+    border: 2px solid #000000;
+    border-radius: 9px;
+    font-size: 17px;
+}
+
+button{
+
+    padding: 5px 25px;
+    background: rgb(33, 104, 166);
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+button:hover{
+    border: 2px solid #000000;
+    background: rgb(20, 50, 93);
+}
+
+.weather-card{
+    margin-top: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.temp-container{
+    font-size: 10rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Cores padrão (Céu Limpo) */
+body {
+    transition: background 0.5s ease; /* Suaviza a transição de cores */
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    min-height: 100vh;
+}
+
+/* Classe para Tempo Fechado/Nublado */
+body.nublado {
+    background: linear-gradient(135deg, #757f9a, #d7dde8);
+}
+
+/* Classe para Chuva */
+body.chuva {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+/* Classe para Noite (Opcional, mas profissional) */
+body.noite {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* 1. O container que segura os 5 itens precisa ser um Flexbox */
+#previsaosemana {
+
+
+    display: flex;
+    flex-direction: row;     /* Força a ficarem lado a lado */
+    justify-content: center; /* Centraliza o grupo de cards na tela */
+    gap: 15px;               /* Espaço entre os cards */
+    flex-wrap: wrap;         /* Se a tela for pequena (celular), eles pulam linha automaticamente */
+
+
+    /*background-color: #8b9ca1;*/
+    font-family: "Geom", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10px;
+    font-style: normal;
+}
+
+/* 2. Cada item individual precisa de um estilo para parecer um "cardzinho" */
+.previsão-item {
+    background: rgba(255, 255, 255, 0.1); /* Fundo sutil */
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;   /* Faz o conteúdo do item ficar um em cima do outro */
+    align-items: center;      /* Centraliza o texto */
+    min-width: 90px;          /* Largura mínima para não amassar */
+    flex: 1;                  /* Faz todos terem o mesmo tamanho */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.previsão-item span {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.previsão-item strong {
+    font-size: 1rem;
+    color: #2f2f2f;
+}
+
+#previsaosemana :hover{
+    background-color: rgb(33, 104, 166);
+}
+
+
+
+.titulo {
+  font-family: "Geom", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 10px;
+  font-style: normal;
+}
+#icons{
+    margin-right: 1px;
+    display: flex;
+    transform: translateX(-5px);
+}
+
+
+/* 1. Unificando o alinhamento de todas as linhas de ícones */
+/* 1. Alinha o container para que tudo fique na mesma linha horizontal */
+/* Unificando o alinhamento de todas as linhas de detalhes */
+/* 1. Unificando o alinhamento vertical das linhas de detalhes */
+/* AJUSTE ESPECÍFICO PARA DESALINHAMENTO VERTICAL */
+
+/* 1. Unificando o alinhamento vertical das linhas de detalhes */
+/* AJUSTE SOMENTE PARA O ALINHAMENTO DOS ÍCONES */
+
+/* Isso trava o alinhamento centralizado em todas as linhas de ícones */
+.iconlinha, .uv, .icon-vento {
+    display: flex !important;
+    align-items: center !important; /* Alinha o meio do ícone com o meio do texto */
+    justify-content: center !important;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.iconlinha img, .uv img, .icon-vento img {
+    display: block;
+    height: auto; /* Mantém a proporção */
+    flex-shrink: 0; /* Impede que o ícone amasse */
+}
+
+/* Remove margens de textos internos que podem empurrar o ícone */
+.iconlinha strong, .uv span, .icon-vento span {
+    margin: 0 !important;
+    line-height: 1; 
+}
+
+/* Garante que o conteúdo da linha de temperatura nunca quebre */
+/* Padroniza todas as linhas de informação do card */
+/* 1. Padroniza todas as linhas (Temperatura, UV e Vento) */
+.iconlinha {
+    display: flex !important;
+    align-items: center !important;    /* Alinha o centro do ícone com o centro do texto */
+    justify-content: center !important; /* Centraliza o conjunto no card */
+    gap: 8px;                         /* Espaço entre ícone e texto */
+    width: 100%;
+    margin: 6px 0;
+    white-space: nowrap;               /* Impede que o 'km/h' ou a temp caiam de linha */
+}
+
+/* 2. Tamanho uniforme para todos os ícones das linhas */
+.iconlinha img {
+    width: 22px !important;            /* Largura fixa para manter o alinhamento vertical */
+    height: 22px !important;
+    object-fit: contain;
+    flex-shrink: 0;                    /* Impede o ícone de ser "amassado" */
+}
+
+/* 3. Ajuste do texto para alinhamento perfeito */
+.iconlinha span, 
+.iconlinha strong {
+    font-size: 0.95rem;
+    margin: 0 !important;
+    line-height: 1;                    /* Remove folgas invisíveis acima/abaixo das letras */
+}
+
+/* Estilo extra para destacar a temperatura */
+.temp-txt {
+    font-weight: bold;
+    color: #2f2f2f;
+}
